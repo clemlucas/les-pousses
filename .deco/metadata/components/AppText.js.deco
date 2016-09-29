@@ -1,0 +1,50 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 15,
+					"ch": 22
+				},
+				"to": {
+					"line": 15,
+					"ch": 29
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontFamily",
+			"type": "string",
+			"name": "FontFamily"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 17,
+					"ch": 20
+				},
+				"to": {
+					"line": 17,
+					"ch": 22
+				}
+			},
+			"type": "number",
+			"name": "FontSize"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 18,
+					"ch": 22
+				},
+				"to": {
+					"line": 18,
+					"ch": 28
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontWeight",
+			"type": "string",
+			"name": "FontWeight"
+		}
+	]
+}

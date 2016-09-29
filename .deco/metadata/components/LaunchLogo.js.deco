@@ -1,0 +1,20 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 19,
+					"ch": 17
+				},
+				"to": {
+					"line": 19,
+					"ch": 26
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode"
+		}
+	]
+}
