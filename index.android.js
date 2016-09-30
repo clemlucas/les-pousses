@@ -5,17 +5,17 @@
  */
 
 import React, { Component } from 'react';
-import LaunchScreen from './components/LaunchScreen.js';
+import LaunchScreen from './src/components/LaunchScreen.js';
 import {
-  AppRegistry
+	AppRegistry
 } from 'react-native';
 
 class Project extends Component {
-  render() {
-    return (
-      <LaunchScreen/>
-    );
-  }
+	render() {
+		return (
+			<LaunchScreen/>
+		);
+	}
 }
 
 AppRegistry.registerComponent('Project', () => Project);

@@ -5,13 +5,13 @@
  */
 
 import React, { Component } from 'react';
-import LoginScreen from './components/LoginScreen.js';
+import App from './src/components/App';
 import { View, AppRegistry, StyleSheet } from 'react-native';
 
 class Project extends Component {
-  render() {
-    return (<LoginScreen/>);
-  }
+	render() {
+		return (<App/>);
+	}
 }
 
 AppRegistry.registerComponent('Project', () => Project);

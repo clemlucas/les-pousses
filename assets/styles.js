@@ -1,12 +1,16 @@
-import { StyleSheet } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
-const styles = StyleSheet.create({
+EStyleSheet.build();
+
+const styles = EStyleSheet.create({
+	$green: 'rgb(0,183,0)',
+	$pink: 'rgb(255, 204, 199)',
 	text: {
 		fontFamily: "Karla",
 		fontSize: 13,
 	},
 	greenText: {
-		color: 'rgb(0,183,0)'
+		color: '$green'
 	},
 	blackText: {
 		color: '#fff'
@@ -14,8 +18,20 @@ const styles = StyleSheet.create({
 	flexRowCenter: {
 		flex: 1,
 		flexDirection: 'row',
+		justifyContent: 'space-around',
+		alignItems: 'center'
+	},
+	flexColumnCenter: {
+		flex: 1,
+		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center'
+	},
+	textFlexbox: {
+		flex: 1,
+		flexDirection:'row',
+		alignItems:'center',
+		justifyContent:'center'
 	},
 	loginContainer: {
 		flex: 1,
@@ -33,7 +49,7 @@ const styles = StyleSheet.create({
 		flex: 0.5,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: 'rgb(0,183,0)'
+		backgroundColor: '$green'
 	},
 	inputs: {
 		margin: 30,
@@ -68,10 +84,24 @@ const styles = StyleSheet.create({
 		paddingTop: 10,
 		paddingBottom: 10
 	},
-	buttonCenter: {
+	buttonGreen: {
 		height: 30,
-		padding: 5,
-		backgroundColor: 'rgb(0,183,0)',
+		paddingTop: 5,
+		paddingBottom: 5,
+		paddingLeft: 30,
+		paddingRight: 30,
+		backgroundColor: '$green',
+		borderRadius: 15,
+		borderColor: 'transparent',
+		alignItems: 'center'
+	},
+	buttonPink: {
+		height: 30,
+		paddingTop: 5,
+		paddingBottom: 5,
+		paddingLeft: 30,
+		paddingRight: 30,
+		backgroundColor: '$pink',
 		borderRadius: 15,
 		borderColor: 'transparent',
 		alignItems: 'center'
@@ -81,7 +111,7 @@ const styles = StyleSheet.create({
 		paddingTop: 5,
 		paddingRight: 5,
 		margin: 5,
-		backgroundColor: 'rgb(0,183,0)',
+		backgroundColor: '$green',
 		borderRadius: 15,
 		borderColor: 'transparent',
 		alignItems: 'flex-end'
