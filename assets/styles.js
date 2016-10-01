@@ -18,7 +18,8 @@ const styles = EStyleSheet.create({
 	pageContainer: {
 		flex: 1,
 		flexDirection: 'column',
-		backgroundColor: 'transparent'
+		backgroundColor: 'transparent',
+		alignItems: 'center'
 	},
 	flexRowCenter: {
 		flex: 1,
@@ -138,7 +139,10 @@ const styles = EStyleSheet.create({
 		color: '#fff',
 		fontFamily: 'Karla',
 		fontSize: 14,
-	}
+	},
+	testItemImage: {
+		borderRadius: 70
+	},
 });
 
 module.exports = styles;

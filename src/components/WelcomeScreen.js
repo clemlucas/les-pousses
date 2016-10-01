@@ -22,10 +22,6 @@ export default class WelcomeScreen extends Component {
 		super(props);
 	}
 
-	onPressButton() {
-		console.log("onPressButton");
-	}
-
 	render() {
 		return(
 			<View style={styles.flexColumnCenter}>
@@ -46,7 +42,7 @@ export default class WelcomeScreen extends Component {
 						</View>
 					</TouchableHighlight>
 
-					<TouchableHighlight underlayColor='transparent' onPress={this.onPressButton}>
+					<TouchableHighlight underlayColor='transparent' onPress={Actions.TestsScreen}>
 						<View style={styles.buttonGreen}>
 							<Text style={styles.buttonText}>{I18n.t('startTestButtonText')}</Text>
 						</View>

@@ -5,6 +5,7 @@ import { Router, Scene } from 'react-native-router-flux';
 import LoginScreen from './LoginScreen';
 import WelcomeScreen from './WelcomeScreen';
 import SubscribeScreen from './SubscribeScreen';
+import TestsScreen from './tests/TestsScreen';
 
 export default class App extends Component {
 	constructor(props) {
@@ -14,15 +15,12 @@ export default class App extends Component {
 	render() {
 		return (
 			<View style={{flex: 1}}>
-				<StatusBar
-					backgroundColor="rgb(0,183,0)"
-					barStyle="light-content"
-					/>
 				<Router>
 					<Scene hideNavBar={true} key='root'>
 						<Scene key="LoginScreen" component={LoginScreen} title="LoginScreen"/>
+						<Scene key="SubscribeScreen" component={SubscribeScreen} title="SubscribeScreen"/>
 						<Scene key="WelcomeScreen" component={WelcomeScreen} title="WelcomeScreen"/>
-						<Scene key="SubscribeScreen" component={SubscribeScreen} title="SubscribeScreen" initial={true}/>
+						<Scene key="TestsScreen" component={TestsScreen} title="TestsScreen" initial={true}/>
 					</Scene>
 				</Router>
 			</View>

@@ -11,6 +11,9 @@ const fr = {
 	welcomeTitle: 'Bienvenue à toi \ngrand jardinier !',
 	welcomeText: 'Avant de commencer les cultures,\nnous avons besoin de déterminer\nton niveau pour mieux te conseiller.',
 	passButtonText: 'Passer',
-	startTestButtonText: 'Commencer le test'
+	startTestButtonText: 'Commencer le test',
+
+	takingCuttingsTitle: 'Le bouturage',
+	takingCuttingsQuestion: 'Qu\'est-ce que le bouturage ?'
 };
 export default fr;
