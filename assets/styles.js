@@ -15,6 +15,11 @@ const styles = EStyleSheet.create({
 	blackText: {
 		color: '#fff'
 	},
+	pageContainer: {
+		flex: 1,
+		flexDirection: 'column',
+		backgroundColor: 'transparent'
+	},
 	flexRowCenter: {
 		flex: 1,
 		flexDirection: 'row',
@@ -33,11 +38,6 @@ const styles = EStyleSheet.create({
 		alignItems:'center',
 		justifyContent:'center'
 	},
-	loginContainer: {
-		flex: 1,
-		flexDirection: 'column',
-		backgroundColor: 'transparent'
-	},
 	halfHeight: {
 		flex: 2,
 	},
@@ -50,6 +50,10 @@ const styles = EStyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: '$green'
+	},
+	logoImage: {
+		width: 150,
+		flex: 1
 	},
 	inputs: {
 		margin: 30,
@@ -84,6 +88,9 @@ const styles = EStyleSheet.create({
 		paddingTop: 10,
 		paddingBottom: 10
 	},
+	touchableButton: {
+		margin: 5
+	},
 	buttonGreen: {
 		height: 30,
 		paddingTop: 5,
@@ -102,6 +109,17 @@ const styles = EStyleSheet.create({
 		paddingLeft: 30,
 		paddingRight: 30,
 		backgroundColor: '$pink',
+		borderRadius: 15,
+		borderColor: 'transparent',
+		alignItems: 'center'
+	},
+	buttonFacebook: {
+		height: 30,
+		paddingTop: 5,
+		paddingBottom: 5,
+		paddingLeft: 30,
+		paddingRight: 30,
+		backgroundColor: '#3b5998',
 		borderRadius: 15,
 		borderColor: 'transparent',
 		alignItems: 'center'

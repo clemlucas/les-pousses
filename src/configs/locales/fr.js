@@ -1,7 +1,10 @@
 const fr = {
-	username: 'Nom d\'utilisateur',
-	password: 'Mot de passe',
+	username: 'NOM D\'UTILISATEUR',
+	password: 'MOT DE PASSE',
+	email: 'EMAIL',
+	passwordConfirmation: 'CONFIRMATION DU MOT DE PASSE',
 	forgotPassword: 'Mot de passe oublié ?',
+	connection: 'Connexion',
 	continue: 'Continuer',
 	notRegistered: 'Pas encore enregistré ?',
 	subscribe: 'Créer un compte',

@@ -1,7 +1,10 @@
 const en = {
-	username: 'Username',
-	password: 'Password',
+	username: 'USERNAME',
+	password: 'PASSWORD',
+	email: 'EMAIL',
+	passwordConfirmation: 'PASSWORD CONFIRMATION',
 	forgotPassword: 'Forgot password?',
+	connection: 'Connection',
 	continue: 'Continue',
 	notRegistered: 'Not regitered yet?',
 	subscribe: 'Subscribe',

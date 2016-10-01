@@ -5,6 +5,7 @@ import AppText from './AppText.js';
 import LaunchLogo from './LaunchLogo.js';
 import styles from '../../assets/styles.js';
 import multipleStyles from 'react-native-multiple-styles';
+import I18n from '../configs/i18n';
 
 class LoginScreen extends Component {
 
@@ -27,43 +28,50 @@ class LoginScreen extends Component {
 		});
 
 		return (
-			<View style={styles.loginContainer}>
+			<View style={styles.pageContainer}>
 				<View style={styles.logoContainer}>
 					<LaunchLogo/>
 				</View>
 				<View style={styles.inputs}>
+
 					<View style={styles.inputContainer}>
-						<AppText color='rgb(0,183,0)'>{"Nom d'utilisateur".toUpperCase()}</AppText>
+						<AppText color='rgb(0,183,0)'>{I18n.t('username')}</AppText>
 						<TextInput
-							style={[styles.input, styles.whiteFont]}
-							placeholder="Username"
-							placeholderTextColor="#FFF"
+							style={styles.input}
+							placeholderTextColor="transparent"
 							onChangeText={(username) => this.setState({username})}
 							/>
 					</View>
+
 					<View style={styles.inputContainer}>
-						<AppText color='rgb(0,183,0)'>{"Mot de passe".toUpperCase()}</AppText>
+						<AppText color='rgb(0,183,0)'>{I18n.t('password')}</AppText>
 						<TextInput
 							password={true}
-							style={[styles.input, styles.whiteFont]}
-							placeholder="Password"
-							placeholderTextColor="#FFF"
+							style={styles.input}
+							placeholderTextColor="transparent"
 							onChangeText={(password) => this.setState({password})}
 							/>
 					</View>
+
 					<TouchableHighlight style={styles.forgotContainer} underlayColor='transparent' onPress={this._onPressButton}>
-						<Text style={[styles.greenText, styles.text]}>Mot de passe oublié ?</Text>
+						<Text style={[styles.greenText, styles.text]}>{I18n.t('forgotPassword')}</Text>
 					</TouchableHighlight>
 
-					<TouchableHighlight underlayColor='transparent' onPress={goToWelcomeScreen}>
+					<TouchableHighlight style={styles.touchableButton} underlayColor='transparent' onPress={goToWelcomeScreen}>
 						<View style={styles.buttonGreen}>
-							<Text style={styles.buttonText}>Continuer  ▸</Text>
+							<Text style={styles.buttonText}>{I18n.t('connection')}</Text>
+						</View>
+					</TouchableHighlight>
+
+					<TouchableHighlight style={styles.touchableButton} underlayColor='transparent' onPress={goToWelcomeScreen}>
+						<View style={styles.buttonFacebook}>
+							<Text style={styles.buttonText}>Facebook</Text>
 						</View>
 					</TouchableHighlight>
 
 					<View style={styles.flexRowCenter}>
 						<Text style={[styles.greenText, styles.text]}>Pas encore enregistré ? </Text>
-						<TouchableHighlight underlayColor='transparent' onPress={this._onPressButton}>
+						<TouchableHighlight underlayColor='transparent' onPress={Actions.SubscribeScreen}>
 							<Text style={[styles.greenText, styles.text, {textDecorationLine: 'underline'}]}>Créer un compte</Text>
 						</TouchableHighlight>
 					</View>

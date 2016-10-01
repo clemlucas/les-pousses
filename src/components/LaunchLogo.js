@@ -15,7 +15,7 @@ export default class LaunchScreen extends Component {
 
 	render() {
 		return (
-			<Animated.Image                         // Base: Image, Text, View
+			<Animated.Image
 			source={require('../../assets/images/launch_logo.png')}
 			resizeMode="contain"
 			style={{ width: 150,
