@@ -10,22 +10,47 @@ import tests from '../../../assets/tests.js';
 import TestItem from './TestItem';
 
 export default class TestsScreen extends Component {
+	constructor(props) {
+			super(props);
+
+			this.state = {
+				currentTest: 0,
+				testScore: 0
+			}
+	}
+
 	componentWillMount() {
 		StatusBar.setBarStyle('default', true);
 	}
 
+	pressChoice(choice) {
+		var testScore = this.state.testScore;
+
+		if (choice === tests[this.state.currentTest].answer) {
+			testScore++;
+		}
+
+		console.log("Current score: " + testScore + "/4");
+
+		if (this.state.currentTest === tests.length - 1) {
+			Actions.WelcomeScreen();
+			return;
+		}
+
+		this.setState({
+			currentTest: this.state.currentTest + 1,
+			testScore: testScore
+		})
+	}
+
+	nextTest() {
+	}
+
 	render() {
 		return (
-			<View style={styles.pageContainer}>
-
-				<TestItem
-					imageUrl={require('../../../assets/images/tests/bouture.jpg')}
-					titleKey='takingCuttingsTitle'
-					questionKey='takingCuttingsQuestion'
-					choices={['choice A', 'choice B', 'choice C']}
-					answer='choice A'
-					/>
-			</View>
+			<TestItem
+				test={tests[this.state.currentTest]}
+				pressChoice={this.pressChoice.bind(this)}/>
 		);
 	}
 }
