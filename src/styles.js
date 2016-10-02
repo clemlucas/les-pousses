@@ -1,25 +1,49 @@
-import EStyleSheet from 'react-native-extended-stylesheet';
+import { Dimensions, StyleSheet } from 'react-native';
+import stylesVars from './stylesVars';
 
-EStyleSheet.build();
+const windowHeight = Dimensions.get('window').height;
+const windowWidth = Dimensions.get('window').width;
 
-const styles = EStyleSheet.create({
-	$green: 'rgb(0,183,0)',
-	$pink: 'rgb(255, 204, 199)',
+const styles = StyleSheet.create({
 	text: {
 		fontFamily: "Karla",
 		fontSize: 13,
 	},
+	greenTitle: {
+		fontSize: 18,
+		color: stylesVars.green,
+		fontWeight: '500'
+	},
 	greenText: {
-		color: '$green'
+		color: stylesVars.green
 	},
 	blackText: {
 		color: '#fff'
+	},
+	container: {
+		flex: 1,
+	},
+	scrollView: {
+		position: 'absolute',
+		top: 0,
+		left: 0,
+		right: 0,
+		bottom: 0,
+		flex: 1,
+		overflow: "visible"
+	},
+	innerContainer: {
+		flex: 1,
+		flexDirection: "column",
+		alignItems: 'center',
+		justifyContent: 'center',
+		height: windowHeight,
+		width: windowWidth,
 	},
 	pageContainer: {
 		flex: 1,
 		flexDirection: 'column',
 		backgroundColor: 'transparent',
-		alignItems: 'center'
 	},
 	flexRowCenter: {
 		flex: 1,
@@ -50,14 +74,14 @@ const styles = EStyleSheet.create({
 		flex: 0.5,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '$green'
+		backgroundColor: stylesVars.green
 	},
 	logoImage: {
 		width: 150,
 		flex: 1
 	},
 	inputs: {
-		margin: 30,
+		margin: windowWidth * 0.2,
 		flex: .5
 	},
 	inputPassword: {
@@ -94,33 +118,27 @@ const styles = EStyleSheet.create({
 	},
 	buttonGreen: {
 		height: 30,
-		paddingTop: 5,
-		paddingBottom: 5,
-		paddingLeft: 30,
-		paddingRight: 30,
-		backgroundColor: '$green',
+		paddingVertical: 5,
+		paddingHorizontal: 30,
+		backgroundColor: stylesVars.green,
 		borderRadius: 15,
 		borderColor: 'transparent',
 		alignItems: 'center'
 	},
 	buttonPink: {
 		height: 30,
-		paddingTop: 5,
-		paddingBottom: 5,
-		paddingLeft: 30,
-		paddingRight: 30,
-		backgroundColor: '$pink',
+		paddingVertical: 5,
+		paddingHorizontal: 30,
+		backgroundColor: stylesVars.pink,
 		borderRadius: 15,
 		borderColor: 'transparent',
 		alignItems: 'center'
 	},
 	buttonFacebook: {
 		height: 30,
-		paddingTop: 5,
-		paddingBottom: 5,
-		paddingLeft: 30,
-		paddingRight: 30,
-		backgroundColor: '#3b5998',
+		paddingVertical: 5,
+		paddingHorizontal: 30,
+		backgroundColor: stylesVars.blueFb,
 		borderRadius: 15,
 		borderColor: 'transparent',
 		alignItems: 'center'
@@ -130,7 +148,7 @@ const styles = EStyleSheet.create({
 		paddingTop: 5,
 		paddingRight: 5,
 		margin: 5,
-		backgroundColor: '$green',
+		backgroundColor: stylesVars.green,
 		borderRadius: 15,
 		borderColor: 'transparent',
 		alignItems: 'flex-end'
@@ -140,9 +158,35 @@ const styles = EStyleSheet.create({
 		fontFamily: 'Karla',
 		fontSize: 14,
 	},
-	testItemImage: {
-		borderRadius: 70
+	testItemTop: {
+		flex: .5,
+		flexDirection: "column",
+		alignItems: 'center',
+		justifyContent: 'center'
 	},
+	testItemBody: {
+		flex: .25,
+		flexDirection: "column",
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	testItemFooter: {
+		flex: .25,
+		flexDirection: "column",
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	testItemImage: {
+		borderRadius: 70,
+	},
+	choiceButton: {
+		paddingVertical: 5,
+		paddingHorizontal: 30,
+		borderColor: stylesVars.green,
+		borderWidth: 2,
+		borderRadius: 15,
+		alignItems: 'center'
+	}
 });
 
 module.exports = styles;
