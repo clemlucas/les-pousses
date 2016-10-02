@@ -42,6 +42,10 @@ export default class SubscribeScreen extends Component {
 						<TextInput
 							keyboardType='email-address'
 							style={styles.input}
+							autoFocus={true}
+							autoCapitalize='none'
+							autoCorrect={false}
+							returnKeyType='next'
 							placeholderTextColor='transparent'
 							onChangeText={(email) => this.setState({email: email.toLowerCase()})}
 							/>
@@ -51,6 +55,10 @@ export default class SubscribeScreen extends Component {
 						<AppText color='rgb(0,183,0)'>{I18n.t('username')}</AppText>
 						<TextInput
 							style={styles.input}
+							autoFocus={false}
+							autoCapitalize='none'
+							autoCorrect={false}
+							returnKeyType='next'
 							placeholderTextColor="transparent"
 							onChangeText={(username) => this.setState({username})}
 							/>
@@ -61,7 +69,12 @@ export default class SubscribeScreen extends Component {
 						<TextInput
 							password={true}
 							style={styles.input}
+							autoFocus={false}
+							autoCapitalize='none'
+							autoCorrect={false}
+							returnKeyType='next'
 							placeholderTextColor="transparent"
+							secureTextEntry={true}
 							onChangeText={(username) => this.setState({password})}
 							/>
 					</View>
@@ -71,6 +84,10 @@ export default class SubscribeScreen extends Component {
 						<TextInput
 							password={true}
 							style={styles.input}
+							autoFocus={false}
+							autoCapitalize='none'
+							autoCorrect={false}
+							returnKeyType='next'
 							placeholderTextColor="transparent"
 							onChangeText={(passwordConfirmation) => this.setState({passwordConfirmation})}
 							/>
