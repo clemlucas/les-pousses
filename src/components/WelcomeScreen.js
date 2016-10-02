@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
-import styles from '../../assets/styles.js';
+import styles from '../styles.js';
 import I18n from '../configs/i18n';
 import { Actions } from 'react-native-router-flux';
 

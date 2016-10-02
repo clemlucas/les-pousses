@@ -3,7 +3,7 @@ import { View, Image, TextInput, Text, TouchableHighlight } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import AppText from './AppText.js';
 import LaunchLogo from './LaunchLogo.js';
-import styles from '../../assets/styles.js';
+import styles from '../styles.js';
 import multipleStyles from 'react-native-multiple-styles';
 import I18n from '../configs/i18n';
 
@@ -15,10 +15,6 @@ class LoginScreen extends Component {
 			username: '',
 			password: ''
 		};
-	}
-
-	_onPressButton() {
-		console.log("_onPressButton");
 	}
 
 	render() {

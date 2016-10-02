@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import { View, StatusBar } from 'react-native';
-import styles from '../../../assets/styles';
+import {
+	View,
+	StatusBar,
+} from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
+import I18n from '../../configs/i18n';
+import tests from '../../../assets/tests.js';
 import TestItem from './TestItem';
 
 export default class TestsScreen extends Component {

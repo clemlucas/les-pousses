@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Image, Text, TextInput, TouchableHighlight } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import AppText from './AppText';
-import styles from '../../assets/styles.js';
+import styles from '../styles.js';
 import I18n from '../configs/i18n';
 
 export default class SubscribeScreen extends Component {
