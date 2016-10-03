@@ -24,7 +24,7 @@ class LoginScreen extends Component {
 		});
 
 		return (
-			<View style={styles.pageContainer}>
+			<View style={styles.container}>
 				<View style={styles.logoContainer}>
 					<LaunchLogo/>
 				</View>
@@ -34,6 +34,10 @@ class LoginScreen extends Component {
 						<AppText color='rgb(0,183,0)'>{I18n.t('username')}</AppText>
 						<TextInput
 							style={styles.input}
+							autoFocus={false}
+							autoCapitalize='none'
+							autoCorrect={false}
+							returnKeyType='next'
 							placeholderTextColor="transparent"
 							onChangeText={(username) => this.setState({username})}
 							/>
@@ -44,6 +48,10 @@ class LoginScreen extends Component {
 						<TextInput
 							password={true}
 							style={styles.input}
+							autoFocus={false}
+							autoCapitalize='none'
+							autoCorrect={false}
+							returnKeyType='next'
 							placeholderTextColor="transparent"
 							onChangeText={(password) => this.setState({password})}
 							/>
@@ -55,13 +63,13 @@ class LoginScreen extends Component {
 
 					<TouchableHighlight style={styles.touchableButton} underlayColor='transparent' onPress={goToWelcomeScreen}>
 						<View style={styles.buttonGreen}>
-							<Text style={styles.buttonText}>{I18n.t('connection')}</Text>
+							<Text style={styles.buttonTextWhite}>{I18n.t('connection')}</Text>
 						</View>
 					</TouchableHighlight>
 
 					<TouchableHighlight style={styles.touchableButton} underlayColor='transparent' onPress={goToWelcomeScreen}>
 						<View style={styles.buttonFacebook}>
-							<Text style={styles.buttonText}>Facebook</Text>
+							<Text style={styles.buttonTextWhite}>Facebook</Text>
 						</View>
 					</TouchableHighlight>
 
