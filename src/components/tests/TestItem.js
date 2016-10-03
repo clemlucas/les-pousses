@@ -55,10 +55,9 @@ export default class TestItem extends Component {
 						<View style={styles.testItemTop}>
 							<ResponsiveImage
 								initWidth="150" initHeight="150"
-								style={styles.testItemImage}
 								source={this.props.test.image}/>
-							<Text style={[styles.greenTitle, {marginVertical: 10}]}>{I18n.t(this.props.test.titleKey)}</Text>
-							<Text style={{fontWeight: '500'}}>{I18n.t(this.props.test.questionKey)}</Text>
+							<Text style={styles.greenTitle}>{I18n.t(this.props.test.titleKey)}</Text>
+							<Text style={styles.testItemQuestion}>{I18n.t(this.props.test.questionKey)}</Text>
 						</View>
 
 						<View style={styles.testItemBody}>
