@@ -95,7 +95,7 @@ export default class SubscribeScreen extends Component {
 
 					<TouchableHighlight style={[styles.touchableButton, {marginTop: 40}]} underlayColor='transparent' onPress={this.goToWelcomeScreen.bind(this)}>
 						<View style={styles.buttonGreen}>
-							<Text style={styles.buttonText}>{I18n.t('connection')}</Text>
+							<Text style={styles.buttonTextWhite}>{I18n.t('connection')}</Text>
 						</View>
 					</TouchableHighlight>
 				</View>

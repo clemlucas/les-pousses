@@ -38,13 +38,13 @@ export default class WelcomeScreen extends Component {
 
 					<TouchableHighlight style={{margin: 20}} underlayColor='transparent' onPress={Actions.LoginScreen}>
 						<View style={styles.buttonPink}>
-							<Text style={styles.buttonText}>{I18n.t('passButtonText')}</Text>
+							<Text style={styles.buttonTextWhite}>{I18n.t('passButtonText')}</Text>
 						</View>
 					</TouchableHighlight>
 
 					<TouchableHighlight underlayColor='transparent' onPress={Actions.TestsScreen}>
 						<View style={styles.buttonGreen}>
-							<Text style={styles.buttonText}>{I18n.t('startTestButtonText')}</Text>
+							<Text style={styles.buttonTextWhite}>{I18n.t('startTestButtonText')}</Text>
 						</View>
 					</TouchableHighlight>
 				</View>

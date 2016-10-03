@@ -68,7 +68,7 @@ export default class TestItem extends Component {
 						<View style={styles.testItemFooter}>
 							<TouchableHighlight style={styles.touchableButton} underlayColor='transparent' onPress={Actions.WelcomeScreen}>
 								<View style={styles.buttonPink}>
-									<Text style={styles.buttonText}>{I18n.t('passButtonText')}</Text>
+									<Text style={styles.buttonTextWhite}>{I18n.t('passButtonText')}</Text>
 								</View>
 							</TouchableHighlight>
 						</View>

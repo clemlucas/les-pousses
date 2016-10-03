@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
 		borderColor: 'transparent',
 		alignItems: 'flex-end'
 	},
-	buttonText: {
+	buttonTextWhite: {
 		color: '#fff',
 		fontFamily: 'Karla',
 		fontSize: 14,
