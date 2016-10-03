@@ -36,5 +36,19 @@ const fr = {
 	waterTestQ1: "Sel",
 	waterTestQ2: "Huile",
 	waterTestQ3: "Citron",
+
+	drainageTestTitle: "Le drainage",
+	drainageTestQuestion: "Que faut-il ajouter au fond des pots pour drainer\nl'eau et éviter le pourissement des racines?",
+	drainageTestQ1: "Billes d'argile",
+	drainageTestQ2: "Sable",
+	drainageTestQ3: "Papier journal",
+
+	level: 'Niveau',
+	levelHue: 'Binette',
+	levelSecateurs: 'Sécateur',
+	levelTutor: 'Tuteur',
+	levelHueText: "Débutant,\nMontes en compétences grâce à la communauté.",
+	levelSecateursText: "Pas mal du tout !\nPour un test plus approfondi de tes compétences,\nrendez-vous dans ton compte, espace niveau.",
+	levelTutor: "Impressionant !\nPour un test plus approfondi de tes compétences,\nrendez-vous dans ton compte, espace niveau.",
 };
 export default fr;

@@ -33,7 +33,7 @@ export default class TestsScreen extends Component {
 		console.log("Current score: " + testScore + "/4");
 
 		if (this.state.currentTest === tests.length - 1) {
-			Actions.WelcomeScreen();
+			Actions.TestResultScreen({testScore});
 			return;
 		}
 

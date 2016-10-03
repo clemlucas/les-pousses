@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
 	greenTitle: {
 		fontSize: 18,
 		color: stylesVars.green,
-		fontWeight: '500'
+		fontWeight: '500',
+		marginVertical: 10
 	},
 	greenText: {
 		color: stylesVars.green
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
 		flex: 1
 	},
 	inputs: {
-		margin: windowWidth * 0.2,
+		margin: windowWidth * 0.1,
 		flex: .5
 	},
 	inputPassword: {
@@ -158,11 +159,15 @@ const styles = StyleSheet.create({
 		fontFamily: 'Karla',
 		fontSize: 14,
 	},
+	buttonTextBlack: {
+		color: '#000',
+		fontSize: 14,
+	},
 	testItemTop: {
 		flex: .5,
 		flexDirection: "column",
 		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
 	},
 	testItemBody: {
 		flex: .25,
@@ -176,8 +181,9 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center'
 	},
-	testItemImage: {
-		borderRadius: 70,
+	testItemQuestion: {
+		textAlign: 'center',
+		fontWeight: '500'
 	},
 	choiceButton: {
 		paddingVertical: 5,
@@ -186,7 +192,7 @@ const styles = StyleSheet.create({
 		borderWidth: 2,
 		borderRadius: 15,
 		alignItems: 'center'
-	}
+	},
 });
 
 module.exports = styles;
