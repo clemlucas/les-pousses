@@ -9,7 +9,8 @@ const welcomeStyles = StyleSheet.create({
 		fontSize: 18,
 		lineHeight: 18,
 		letterSpacing: 2,
-		padding: 20
+		padding: 20,
+		textAlign: 'center'
 	},
 	welcomeText: {
 		flex: 1,
