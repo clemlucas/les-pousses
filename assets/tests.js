@@ -28,6 +28,13 @@ const tests = [
 		questionKey: 'takingCuttingsTestQuestion',
 		choices: ['takingCuttingsTestQ1', 'takingCuttingsTestQ2', 'takingCuttingsTestQ3'],
 		answer: 'takingCuttingsTestQ2',
+	},
+	{
+		image: require('./images/tests/drainageTest.png'),
+		titleKey: 'drainageTestTitle',
+		questionKey: 'drainageTestQuestion',
+		choices: ['drainageTestQ1', 'drainageTestQ2', 'drainageTestQ3'],
+		answer: 'drainageTestQ1',
 	}
 ];
 export default tests;
