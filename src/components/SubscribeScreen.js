@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, Image, Text, TextInput, TouchableHighlight } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import AppText from './AppText';
 import styles from '../styles.js';
 import I18n from '../configs/i18n';
 
@@ -38,7 +37,7 @@ export default class SubscribeScreen extends Component {
 
 				<View style={styles.inputs}>
 					<View style={styles.inputContainer}>
-						<AppText color='rgb(0,183,0)'>{I18n.t('email')}</AppText>
+						<Text style={styles.inputLabel}>{I18n.t('email')}</Text>
 						<TextInput
 							keyboardType='email-address'
 							style={styles.input}
@@ -52,7 +51,7 @@ export default class SubscribeScreen extends Component {
 					</View>
 
 					<View style={styles.inputContainer}>
-						<AppText color='rgb(0,183,0)'>{I18n.t('username')}</AppText>
+						<Text style={styles.inputLabel} color='rgb(0,183,0)'>{I18n.t('username')}</Text>
 						<TextInput
 							style={styles.input}
 							autoFocus={false}
@@ -65,7 +64,7 @@ export default class SubscribeScreen extends Component {
 					</View>
 
 					<View style={styles.inputContainer}>
-						<AppText color='rgb(0,183,0)'>{I18n.t('password')}</AppText>
+						<Text style={styles.inputLabel} color='rgb(0,183,0)'>{I18n.t('password')}</Text>
 						<TextInput
 							password={true}
 							style={styles.input}
@@ -80,7 +79,7 @@ export default class SubscribeScreen extends Component {
 					</View>
 
 					<View style={styles.inputContainer}>
-						<AppText color='rgb(0,183,0)'>{I18n.t('passwordConfirmation')}</AppText>
+						<Text style={styles.inputLabel} color='rgb(0,183,0)'>{I18n.t('passwordConfirmation')}</Text>
 						<TextInput
 							password={true}
 							style={styles.input}

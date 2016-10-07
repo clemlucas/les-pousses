@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { View, Image, TextInput, Text, TouchableHighlight } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import AppText from './AppText.js';
-import LaunchLogo from './LaunchLogo.js';
+import LaunchLogo from './widgets/LaunchLogo.js';
+
 import styles from '../styles.js';
 import multipleStyles from 'react-native-multiple-styles';
 import I18n from '../configs/i18n';
@@ -13,7 +13,8 @@ class LoginScreen extends Component {
 		super(props);
 		this.state = {
 			username: '',
-			password: ''
+			password: '',
+			user: null,
 		};
 	}
 
@@ -23,6 +24,9 @@ class LoginScreen extends Component {
 			password: this.state.password
 		});
 
+		var _this = this;
+		var user = this.state.user;
+
 		return (
 			<View style={styles.container}>
 				<View style={styles.logoContainer}>
@@ -31,7 +35,7 @@ class LoginScreen extends Component {
 				<View style={styles.inputs}>
 
 					<View style={styles.inputContainer}>
-						<AppText color='rgb(0,183,0)'>{I18n.t('username')}</AppText>
+						<Text style={styles.inputLabel}>{I18n.t('username')}</Text>
 						<TextInput
 							style={styles.input}
 							autoFocus={false}
@@ -44,7 +48,7 @@ class LoginScreen extends Component {
 					</View>
 
 					<View style={styles.inputContainer}>
-						<AppText color='rgb(0,183,0)'>{I18n.t('password')}</AppText>
+						<Text style={styles.inputLabel}>{I18n.t('password')}</Text>
 						<TextInput
 							password={true}
 							style={styles.input}
@@ -66,7 +70,7 @@ class LoginScreen extends Component {
 							<Text style={styles.buttonTextWhite}>{I18n.t('connection')}</Text>
 						</View>
 					</TouchableHighlight>
-
+					
 					<TouchableHighlight style={styles.touchableButton} underlayColor='transparent' onPress={goToWelcomeScreen}>
 						<View style={styles.buttonFacebook}>
 							<Text style={styles.buttonTextWhite}>Facebook</Text>

@@ -49,6 +49,6 @@ const fr = {
 	levelTutor: 'Tuteur',
 	levelHueText: "Débutant,\nMontes en compétences grâce à la communauté.",
 	levelSecateursText: "Pas mal du tout !\nPour un test plus approfondi de tes compétences,\nrendez-vous dans ton compte, espace niveau.",
-	levelTutor: "Impressionant !\nPour un test plus approfondi de tes compétences,\nrendez-vous dans ton compte, espace niveau.",
+	levelTutorText: "Impressionant !\nPour un test plus approfondi de tes compétences,\nrendez-vous dans ton compte, espace niveau.",
 };
 export default fr;

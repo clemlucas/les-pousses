@@ -37,7 +37,7 @@ export default class WelcomeScreen extends Component {
 
 				<View style={styles.flexRowCenter}>
 
-					<TouchableHighlight style={{margin: 20}} underlayColor='transparent' onPress={Actions.LoginScreen}>
+					<TouchableHighlight style={{margin: 20}} underlayColor='transparent' onPress={Actions.TabsScreen}>
 						<View style={styles.buttonPink}>
 							<Text style={styles.buttonTextWhite}>{I18n.t('passButtonText')}</Text>
 						</View>

@@ -24,6 +24,10 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 	},
+	actionButtonIcon: {
+		fontSize: 20,
+		color: 'black',
+	},
 	scrollView: {
 		position: 'absolute',
 		top: 0,
@@ -85,6 +89,12 @@ const styles = StyleSheet.create({
 		margin: windowWidth * 0.1,
 		flex: .5
 	},
+	inputLabel: {
+		color:  stylesVars.green,
+		fontSize: 13,
+		fontWeight: '500',
+		paddingTop: 10,
+	},
 	inputPassword: {
 		marginLeft: 15,
 		width: 20,
@@ -100,9 +110,6 @@ const styles = StyleSheet.create({
 		borderWidth: 1,
 		borderBottomColor: '#CCC',
 		borderColor: 'transparent'
-	},
-	inputLabel: {
-		paddingTop: 10,
 	},
 	input: {
 		height: 40,

@@ -73,7 +73,7 @@ export default class TestResultScreen extends Component {
 				</View>
 
 				<View style={styles.testItemFooter}>
-					<TouchableHighlight underlayColor='transparent' onPress={Actions.WelcomeScreen}>
+					<TouchableHighlight underlayColor='transparent' onPress={Actions.TabsScreen}>
 						<View style={styles.buttonGreen}>
 							<Text style={styles.buttonTextWhite}>{I18n.t('continue')}</Text>
 						</View>
