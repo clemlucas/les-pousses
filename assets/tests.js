@@ -24,10 +24,10 @@ const tests = [
 	},
 	{
 		image: require('./images/tests/waterTest.png'),
-		titleKey: 'takingCuttingsTestTitle',
-		questionKey: 'takingCuttingsTestQuestion',
-		choices: ['takingCuttingsTestQ1', 'takingCuttingsTestQ2', 'takingCuttingsTestQ3'],
-		answer: 'takingCuttingsTestQ2',
+		titleKey: 'waterTestTitle',
+		questionKey: 'waterTestQuestion',
+		choices: ['waterTestQ1', 'waterTestQ2', 'waterTestQ3'],
+		answer: 'waterTestQ3',
 	},
 	{
 		image: require('./images/tests/drainageTest.png'),
