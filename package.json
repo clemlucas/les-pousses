@@ -1,9 +1,10 @@
 {
-  "name": "Les Pousses",
+  "name": "Les-Pousses",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "react-native start"
+    "start": "react-native start",
+    "build:ios": "react-native bundle --dev false --platform ios --entry-file ./index.ios.js --bundle-output ./ios/main.jsbundle"
   },
   "dependencies": {
     "apsl-react-native-button": "^3.0.1",
