@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import { View, Text, StatusBar } from 'react-native';
+import { View, Text, StatusBar, Image } from 'react-native';
 import ScrollableTabView, {DefaultTabBar } from 'react-native-scrollable-tab-view';
 import TabBar from './widgets/TabBar';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Actions } from 'react-native-router-flux';
+
+// Import tabs
+import FluxTab from './tabs/FluxTab';
+import TasksTab from './tabs/TasksTab';
+import ProfileTab from './tabs/ProfileTab';
 
 import styles from '../styles.js';
 import stylesVars from '../stylesVars.js';
@@ -21,9 +26,9 @@ export default class TabsScreen extends Component {
 					tabBarActiveTextColor='white'
 					tabBarInactiveTextColor='white'
 					renderTabBar={() => <TabBar />}>
-					<Text tabLabel='ios-photos'>Flux Photos</Text>
-					<Text tabLabel='ios-list'>Tâches</Text>
-					<Text tabLabel='ios-person'>Compte</Text>
+					<FluxTab tabLabel='ios-photos'/>
+					<TasksTab tabLabel='ios-list'/>
+					<ProfileTab tabLabel='ios-person'/>
 				</ScrollableTabView>
 
 				<ActionButton buttonColor={stylesVars.pink}>
