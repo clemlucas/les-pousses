@@ -1,33 +1,43 @@
 const plants = [
 	{
-		name: "Misère Auréa"
+		name: "Misère Auréa",
+		scientificName: "Tradescantia spp. auréa"
 	},
 	{
-		name: "Bégonia Corallina"
+		name: "Bégonia Corallina",
+		scientificName: "Bégonia spp. corallina"
 	},
 	{
-		name: "Ficus rampant"
+		name: "Ficus rampant",
+		scientificName: "Ficus pumila"
 	},
 	{
-		name: "Lierre Kolibri"
+		name: "Lierre Kolibri",
+		scientificName: "Hedera helix Kolibri"
 	},
 	{
-		name: "Chlorophyton"
+		name: "Chlorophyton",
+		scientificName: "Chlorophytum comosum"
 	},
 	{
-		name: "Pothos Marble Queen"
+		name: "Pothos Marble Queen",
+		scientificName: "Epipremnum aureum Marble Queen"
 	},
 	{
-		name: "Misère Zébrina"
+		name: "Misère Zébrina",
+		scientificName: "Tradescantia spp. Zébrina"
 	},
 	{
-		name: "Pothos Néon"
+		name: "Pothos Néon",
+		scientificName: "Epipremnum aureum Néon"
 	},
 	{
-		name: "Bégonia Hirtella"
+		name: "Bégonia Hirtella",
+		scientificName: "Bégonia spp. Hirtella"
 	},
 	{
-		name: "Phylodendron Scandens"
+		name: "Phylodendron Scandens",
+		scientificName: "Philodendron spp. Scandens"
 	},
 ];
 
