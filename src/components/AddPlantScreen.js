@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import AlphabetListView from 'react-native-alphabetlistview';
+import { View, Text, AppRegistry } from 'react-native';
 import TableView, { Item, Section } from 'react-native-tableview';
 
 import plants from '../../assets/plants.js';
@@ -8,11 +7,19 @@ import plants from '../../assets/plants.js';
 import styles from '../styles';
 import stylesVars from '../stylesVars';
 
-class Cell extends Component {
-	render() {
+class PlantCell extends Component {
+	render(){
+		//Fill full height of the cell
+		var style = {flex:1};
+		if (this.props.data.backgroundColor !== undefined) {
+			style.backgroundColor = this.props.data.backgroundColor;
+		}
+		console.log(this.props);
+
 		return (
-			<View style={{height:30}}>
-				<Text>{this.props.item}</Text>
+			<View style={style}>
+				<Text>{this.props.data.title}</Text>
+				<Text>{this.props.data.label}</Text>
 			</View>
 		);
 	}
@@ -22,9 +29,11 @@ export default class AddPlantScreen extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-			plantNames: []
-		}
+		// this.state = {
+		// 	plantNames: []
+		// };
+		this.reactCellModule = "PlantCell";
+		this.propPrefix = "plant";
 	}
 
 	getPlantNamesByLetter(letter) {
@@ -40,17 +49,36 @@ export default class AddPlantScreen extends Component {
 	componentWillMount() {
 		// Alphabetic sort and create plant names array
 		// TODO: Get plants from backend
-		const array = plants.sort(function(a, b) { return (a.name > b.name); }).map((item) => item.name);
-		this.setState({
-			plantNames: array
-		});
+		// const array = plants.sort(function(a, b) { return (a.scientificName > b.scientificName); }).map((item) => item.name);
+		// this.setState({
+		// 	plantNames: array
+		// });
 	}
 
+	// renderItem(itemData, key, index) {
+	//        //TODO passing itemData={itemData} doesn't seem to work... so pass all data props with a prefix to make sure they don't clash
+	//        //with other <Item> props
+	//        var item = {};
+	//        Object.keys(itemData||{}).forEach(k => {
+	//           item[this.propPrefix+k] = itemData[k];
+	//        });
+	//        item[this.propPrefix+"key"] = key;
+	//        //Random images for the demo
+	//        item[this.propPrefix+"url"] = (index%2 == 0?
+	//            "http://images.dinosaurpictures.org/cetiosaurus_eb59.jpg" :
+	//            "http://images.dinosaurpictures.org/090714-nothronychus-02_8e4b.jpg");
+	//
+	//        return (<Item {...item} height={220} backgroundColor={index%2==0?"white":"grey"} key={key} label={key}></Item>);
+	//    }
+	
 	generatePlantListItem() {
+		const sortedPlants = plants.sort(function(a, b) { return (a.scientificName > b.scientificName); });
+		console.log(sortedPlants.length, sortedPlants);
 		var list = [];
-		for (var i = 0; i < this.state.plantNames.length; i++) {
+
+		for (var i = 0; i < sortedPlants.length; i++) {
 			const key = "plant" + i;
-			list.push(<Item key={key}>{this.state.plantNames[i]}</Item>);
+			list.push(<Item key={key} title={sortedPlants[i].scientificName} label={sortedPlants[i].name}/>);
 		}
 
 		return list;
@@ -64,7 +92,7 @@ export default class AddPlantScreen extends Component {
 
 				</View>
 				<TableView style={{flex: .9}}
-					tableViewStyle={TableView.Consts.Style.Plain}
+					reactModuleForCell={this.reactCellModule}
 					tableViewCellStyle={TableView.Consts.CellStyle.Default}
 					onPress={(event) => console.log(event)}>
 					<Section arrow={true}>
@@ -75,3 +103,5 @@ export default class AddPlantScreen extends Component {
 		);
 	}
 }
+
+AppRegistry.registerComponent('PlantCell', () => PlantCell);
