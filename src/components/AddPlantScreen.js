@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import AlphabetListView from 'react-native-alphabetlistview';
+import TableView, { Item, Section } from 'react-native-tableview';
 
 import plants from '../../assets/plants.js';
 
@@ -17,78 +18,42 @@ class Cell extends Component {
 	}
 }
 
-class SectionHeader extends Component {
-	render() {
-		var viewStyle = {
-			width: 0,
-			height: 0
-		};
-		return (
-			<View style={viewStyle}></View>
-		);
-	}
-}
-
-class SectionItem extends Component {
-	render() {
-		return (
-			<Text style={{color:stylesVars.pink}}>{this.props.title}</Text>
-		);
-	}
-}
-
 export default class AddPlantScreen extends Component {
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			plantItems: {
-				A: this.getPlantNamesByLetter("A"),
-				B: this.getPlantNamesByLetter("B"),
-				C: this.getPlantNamesByLetter("C"),
-				D: this.getPlantNamesByLetter("D"),
-				E: this.getPlantNamesByLetter("E"),
-				F: this.getPlantNamesByLetter("F"),
-				G: this.getPlantNamesByLetter("G"),
-				H: this.getPlantNamesByLetter("H"),
-				I: this.getPlantNamesByLetter("I"),
-				J: this.getPlantNamesByLetter("J"),
-				K: this.getPlantNamesByLetter("K"),
-				L: this.getPlantNamesByLetter("L"),
-				M: this.getPlantNamesByLetter("M"),
-				N: this.getPlantNamesByLetter("N"),
-				O: this.getPlantNamesByLetter("O"),
-				P: this.getPlantNamesByLetter("P"),
-				Q: this.getPlantNamesByLetter("Q"),
-				R: this.getPlantNamesByLetter("R"),
-				S: this.getPlantNamesByLetter("S"),
-				T: this.getPlantNamesByLetter("T"),
-				U: this.getPlantNamesByLetter("U"),
-				V: this.getPlantNamesByLetter("V"),
-				W: this.getPlantNamesByLetter("W"),
-				X: this.getPlantNamesByLetter("X"),
-				Y: this.getPlantNamesByLetter("Y"),
-				Z: this.getPlantNamesByLetter("Z"),
-			}
+			plantNames: []
 		}
 	}
 
 	getPlantNamesByLetter(letter) {
-			return plants.filter((item) => this.filterPlant(item, letter)).map(function(item) {
-				return item.name;
-			});
+		return plants.filter((item) => this.filterPlant(item, letter)).map(function(item) {
+			return item.name;
+		});
 	}
 
 	filterPlant(item, letter) {
 		return item.name.startsWith(letter);
 	}
 
-	getPlantsListData() {
-		var data = {
+	componentWillMount() {
+		// Alphabetic sort and create plant names array
+		// TODO: Get plants from backend
+		const array = plants.sort(function(a, b) { return (a.name > b.name); }).map((item) => item.name);
+		this.setState({
+			plantNames: array
+		});
+	}
 
-		};
+	generatePlantListItem() {
+		var list = [];
+		for (var i = 0; i < this.state.plantNames.length; i++) {
+			const key = "plant" + i;
+			list.push(<Item key={key}>{this.state.plantNames[i]}</Item>);
+		}
 
-		return data;
+		return list;
 	}
 
 	render() {
@@ -98,17 +63,14 @@ export default class AddPlantScreen extends Component {
 				<View style={{flex: .1, marginTop: 20, backgroundColor: stylesVars.green}}>
 
 				</View>
-				<View style={{flex: .9}}>
-					<AlphabetListView
-						enableEmptySections
-						data={this.state.plantItems}
-						cell={Cell}
-						cellHeight={30}
-						sectionListItem={SectionItem}
-						sectionHeader={SectionHeader}
-						sectionHeaderHeight={22.5}
-						/>
-				</View>
+				<TableView style={{flex: .9}}
+					tableViewStyle={TableView.Consts.Style.Plain}
+					tableViewCellStyle={TableView.Consts.CellStyle.Default}
+					onPress={(event) => console.log(event)}>
+					<Section arrow={true}>
+						{this.generatePlantListItem()}
+					</Section>
+				</TableView>
 			</View>
 		);
 	}

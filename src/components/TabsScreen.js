@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StatusBar, Image } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import ScrollableTabView, {DefaultTabBar } from 'react-native-scrollable-tab-view';
 import TabBar from './widgets/TabBar';
 import ActionButton from 'react-native-action-button';
