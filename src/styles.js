@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 	},
 	actionButtonIcon: {
-		fontSize: 20,
+		fontSize: 25,
 		color: 'black',
 	},
 	scrollView: {

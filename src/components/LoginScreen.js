@@ -70,7 +70,7 @@ class LoginScreen extends Component {
 							<Text style={styles.buttonTextWhite}>{I18n.t('connection')}</Text>
 						</View>
 					</TouchableHighlight>
-					
+
 					<TouchableHighlight style={styles.touchableButton} underlayColor='transparent' onPress={goToWelcomeScreen}>
 						<View style={styles.buttonFacebook}>
 							<Text style={styles.buttonTextWhite}>Facebook</Text>

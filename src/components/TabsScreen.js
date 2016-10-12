@@ -33,8 +33,8 @@ export default class TabsScreen extends Component {
 					<ActionButton.Item buttonColor={stylesVars.pink} onPress={Actions.LoginScreen}>
 						<Icon name="ios-aperture" style={styles.actionButtonIcon} />
 					</ActionButton.Item>
-					<ActionButton.Item buttonColor={stylesVars.pink} onPress={Actions.LoginScreen}>
-						<Icon name="ios-leaf" style={styles.actionButtonIcon} />
+					<ActionButton.Item buttonColor={stylesVars.pink} onPress={Actions.AddPlantScreen}>
+						<Image source={require('../../assets/images/add-plante-icon.png')} style={{width:20}} resizeMode='contain'/>
 					</ActionButton.Item>
 				</ActionButton>
 			</View>
