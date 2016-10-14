@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, AppRegistry } from 'react-native';
+import { View, Text, StyleSheet, AppRegistry } from 'react-native';
 import TableView, { Item, Section } from 'react-native-tableview';
 
 import plants from '../../assets/plants.js';
@@ -8,18 +8,31 @@ import styles from '../styles';
 import stylesVars from '../stylesVars';
 
 class PlantCell extends Component {
+
 	render(){
-		//Fill full height of the cell
-		var style = {flex:1};
+		const plantCellStyles = StyleSheet.create({
+			plantCellContainer: {
+				flex: 1,
+				paddingLeft: 15
+			},
+			plantCellTitle: {
+				color: stylesVars.green,
+				fontSize: 14
+			},
+			plantCellLabel: {
+				fontSize: 16,
+				fontWeight: "600"
+			}
+		});
+
 		if (this.props.data.backgroundColor !== undefined) {
 			style.backgroundColor = this.props.data.backgroundColor;
 		}
-		console.log(this.props);
 
 		return (
-			<View style={style}>
-				<Text>{this.props.data.title}</Text>
-				<Text>{this.props.data.label}</Text>
+			<View style={plantCellStyles.plantCellContainer}>
+				<Text style={plantCellStyles.plantCellTitle}>{this.props.data.title}</Text>
+				<Text style={plantCellStyles.plantCellLabel}>{this.props.data.label}</Text>
 			</View>
 		);
 	}
@@ -29,9 +42,7 @@ export default class AddPlantScreen extends Component {
 
 	constructor(props) {
 		super(props);
-		// this.state = {
-		// 	plantNames: []
-		// };
+
 		this.reactCellModule = "PlantCell";
 		this.propPrefix = "plant";
 	}
@@ -70,7 +81,7 @@ export default class AddPlantScreen extends Component {
 	//
 	//        return (<Item {...item} height={220} backgroundColor={index%2==0?"white":"grey"} key={key} label={key}></Item>);
 	//    }
-	
+
 	generatePlantListItem() {
 		const sortedPlants = plants.sort(function(a, b) { return (a.scientificName > b.scientificName); });
 		console.log(sortedPlants.length, sortedPlants);
@@ -93,6 +104,7 @@ export default class AddPlantScreen extends Component {
 				</View>
 				<TableView style={{flex: .9}}
 					reactModuleForCell={this.reactCellModule}
+					tableViewStyle={TableView.Consts.Style.Grouped}
 					tableViewCellStyle={TableView.Consts.CellStyle.Default}
 					onPress={(event) => console.log(event)}>
 					<Section arrow={true}>
