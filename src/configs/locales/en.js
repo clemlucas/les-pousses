@@ -50,5 +50,7 @@ const en = {
 	levelHueText: "Novice,\nup your skills thanks to the community.",
 	levelSecateursText: "Not bad at all!\nFor an extensive test of your skills,\nvisit the level menu in your account.",
 	levelTutor: "Amazing!\nFor an extensive test of your skills,\nvisit the level menu in your account.",
+
+	addPlant: 'Add a plant',
 };
 export default en;

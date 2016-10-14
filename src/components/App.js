@@ -25,7 +25,7 @@ export default class App extends Component {
 						<Scene key="WelcomeScreen" component={WelcomeScreen} title="WelcomeScreen" type={ActionConst.REPLACE}/>
 						<Scene key="TestsScreen" component={TestsScreen} title="TestsScreen" type={ActionConst.REPLACE}/>
 						<Scene key="TestResultScreen" component={TestResultScreen} title="TestResultScreen" type={ActionConst.REPLACE}/>
-						<Scene key="TabsScreen" component={TabsScreen} title="TabsScreen"  type={ActionConst.RESET}/>
+						<Scene key="TabsScreen" component={TabsScreen} title="TabsScreen" type={ActionConst.RESET}/>
 						<Scene key="AddPlantScreen" component={AddPlantScreen} title="AddPlantScreen" initial type={ActionConst.PUSH}/>
 					</Scene>
 				</Router>
