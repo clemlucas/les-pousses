@@ -13,16 +13,20 @@ const styles = StyleSheet.create({
 		fontSize: 18,
 		color: stylesVars.green,
 		fontWeight: '500',
-		marginVertical: 10
+		marginVertical: 10,
+		fontFamily: "Karla"
 	},
 	greenText: {
-		color: stylesVars.green
+		color: stylesVars.green,
+		fontFamily: "Karla"
 	},
 	blackText: {
-		color: '#fff'
+		color: '#000',
+		fontFamily: "Karla"
 	},
 	container: {
 		flex: 1,
+		marginTop: 20
 	},
 	actionButtonIcon: {
 		fontSize: 25,
@@ -94,16 +98,19 @@ const styles = StyleSheet.create({
 		fontSize: 13,
 		fontWeight: '500',
 		paddingTop: 10,
+		fontFamily: "Karla"
 	},
 	inputPassword: {
 		marginLeft: 15,
 		width: 20,
-		height: 21
+		height: 21,
+		fontFamily: "Karla"
 	},
 	inputUsername: {
 		marginLeft: 15,
 		width: 20,
-		height: 20
+		height: 20,
+		fontFamily: "Karla"
 	},
 	inputContainer: {
 		margin: 5,
@@ -169,6 +176,7 @@ const styles = StyleSheet.create({
 	buttonTextBlack: {
 		color: '#000',
 		fontSize: 14,
+		fontFamily: "Karla"
 	},
 	testItemTop: {
 		flex: .5,
@@ -188,9 +196,32 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center'
 	},
+	levelResultBox: {
+		paddingVertical: 5,
+		backgroundColor: 'transparent',
+		borderColor: stylesVars.pink,
+		borderWidth: 2,
+		borderRadius: 15,
+		alignItems: 'center'
+	},
+	levelScoreTitle: {
+		color: stylesVars.green,
+		fontSize: 18,
+		letterSpacing: 2,
+		fontWeight: '600',
+		paddingHorizontal: 20,
+		fontFamily: 'Karla'
+	},
+	levelText: {
+		color: stylesVars.green,
+		fontSize: 14,
+		textAlign: 'center',
+		fontFamily: 'Karla'
+	},
 	testItemQuestion: {
 		textAlign: 'center',
-		fontWeight: '500'
+		fontWeight: '500',
+		fontFamily: "Karla"
 	},
 	choiceButton: {
 		paddingVertical: 5,
@@ -199,6 +230,22 @@ const styles = StyleSheet.create({
 		borderWidth: 2,
 		borderRadius: 15,
 		alignItems: 'center'
+	},
+	topBarContainer: {
+		flex: .1,
+		flexDirection: 'row',
+		alignItems: 'center',
+		backgroundColor: stylesVars.green
+	},
+	tabTitle: {
+		marginLeft: 10,
+		color: 'white',
+		fontSize: 18,
+		fontWeight: "600",
+		fontFamily: "Karla"
+	},
+	backButton: {
+		width: 35
 	},
 });
 

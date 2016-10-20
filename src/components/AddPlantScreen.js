@@ -4,7 +4,7 @@ import Hr from 'react-native-hr';
 import { Actions } from 'react-native-router-flux';
 import I18n from '../configs/i18n';
 
-import plants from '../../assets/plants.js';
+import { plants } from '../../assets/plants.js';
 import styles from '../styles';
 import stylesVars from '../stylesVars';
 
@@ -19,22 +19,24 @@ class PlantCell extends Component {
 			},
 			plantCellTitle: {
 				color: stylesVars.green,
-				fontSize: 14
+				fontSize: 14,
+				fontFamily: "Karla"
 			},
 			plantCellLabel: {
 				fontSize: 16,
-				fontWeight: "600"
+				fontWeight: "600",
+				fontFamily: "Karla"
 			}
 		});
 
 		return (
 			<TouchableHighlight
 				underlayColor={'#eee'}
-				onPress={(item) => console.log("press")}>
+				onPress={() => Actions.PlantCard(this.props.plant)}>
 				<View>
 					<View style={plantCellStyles.plantCellContainer}>
-						<Text style={plantCellStyles.plantCellTitle}>{this.props.scientificName}</Text>
-						<Text style={plantCellStyles.plantCellLabel}>{this.props.name}</Text>
+						<Text style={plantCellStyles.plantCellTitle}>{this.props.plant.scientificName}</Text>
+						<Text style={plantCellStyles.plantCellLabel}>{this.props.plant.name}</Text>
 					</View>
 					<Hr lineColor='rgba(179, 179, 179, 0.50)'/>
 				</View>
@@ -75,40 +77,21 @@ export default class AddPlantScreen extends Component {
 
 	renderPlantCell(rowData) {
 		return (
-			<PlantCell scientificName={rowData.scientificName} name={rowData.name}/>
+			<PlantCell plant={rowData}/>
 		);
 	}
 
 	render() {
-		const screenStyle = StyleSheet.create({
-			topBarContainer: {
-				flex: .1,
-				flexDirection: 'row',
-				alignItems: 'center',
-				marginTop: 20,
-				backgroundColor: stylesVars.green
-			},
-			tabTitle: {
-				marginLeft: 10,
-				color: 'white',
-				fontSize: 16,
-				fontWeight: "600"
-			},
-			backButton: {
-				width: 40
-			}
-		});
-
 		return(
 			<View style={styles.container}>
-				<View style={screenStyle.topBarContainer}>
+				<View style={styles.topBarContainer}>
 					<TouchableHighlight
 						style={{marginLeft: 10}}
 						underlayColor={'transparent'}
 						onPress={Actions.pop}>
-						<Image resizeMode='contain' style={screenStyle.backButton} source={require('../../assets/images/back.png')}/>
+						<Image resizeMode='contain' style={styles.backButton} source={require('../../assets/images/back.png')}/>
 					</TouchableHighlight>
-					<Text style={screenStyle.tabTitle}>{I18n.t('addPlant')}</Text>
+					<Text style={styles.tabTitle}>{I18n.t('addPlant')}</Text>
 				</View>
 				<ListView
 					style={{flex: .9}}

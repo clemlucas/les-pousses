@@ -36,7 +36,7 @@ export default class TestItem extends Component {
 				}
 			}>
 				<View style={styles.choiceButton}>
-					<Text>{I18n.t(choice)}</Text>
+					<Text style={{fontFamily: 'Karla'}}>{I18n.t(choice)}</Text>
 				</View>
 			</TouchableHighlight>
 		);
